@@ -33,14 +33,10 @@ end
 def count_contestants_by_hometown(data, hometown)
   count = 0
   data.each do |year, contestant_info|
-    if year.to_s == season
-      contestant_info.each do |contestant|
-        contestant.each do |stat, value|
-          if stat == "name"
-            temp_name = value
-          elsif stat == "status" && value == "Winner"
-            return temp_name.split[0]
-          end
+    contestant_info.each do |contestant|
+      contestant.each do |stat, value|
+        if stat == "hometown" && value == hometown
+          count += 1
         end
       end
     end
