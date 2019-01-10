@@ -7,9 +7,11 @@ def get_first_name_of_season_winner(data, season)
       puts temp_name
       contestant_info.each do |type, detail|
         if type == "status" && detail == "Winner"
-          winner_full = temp_name
-          winner_full.split[0]
-          
+          temp_name.split[0]
+        end
+      end
+    end
+  end
 end
 
 def get_contestant_name(data, occupation)
