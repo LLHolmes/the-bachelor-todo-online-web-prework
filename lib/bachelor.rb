@@ -2,6 +2,7 @@ def get_first_name_of_season_winner(data, season)
   temp_name = ""
   data.each do |year, contestant_info|
     puts year
+    puts season
     if year == season
       contestant_info.each do |contestant|
         temp_name = contestant[:name]
