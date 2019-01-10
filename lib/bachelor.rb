@@ -3,7 +3,8 @@ def get_first_name_of_season_winner(data, season)
   data.each do |year, contestant_info|
     puts year
     if year == season
-      contestant_info.each do |type, detail|
+      contestant_info.each do |contestant_array|
+        contestants.each do
         if type == "name"
           temp_name = detail
 #           puts temp_name
