@@ -3,10 +3,11 @@ def get_first_name_of_season_winner(data, season)
   winner_full = ""
   data.each do |year, contestant_info|
     if year == season
-      temp_name = contestant_info["name"]
-      puts temp_name
       contestant_info.each do |type, detail|
-        if type == "status" && detail == "Winner"
+        if type == "name"
+          temp_name = contestant_info["name"]
+          puts temp_name
+        elsif type == "status" && detail == "Winner"
           return temp_name.split[0]
         end
       end
