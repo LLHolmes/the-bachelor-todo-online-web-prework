@@ -1,8 +1,17 @@
 def get_first_name_of_season_winner(data, season)
   temp_name = ""
   data.each do |year, contestant_info|
-    puts "#{year} #{year.class}"
-    puts "#{season} #{season.class}"
+    if year == season
+      puts "in"
+      contestant_info.each do |contestant|
+        puts contestant[:name]
+        return "CHECK"
+=begin        
+        temp_name = contestant[:name]
+        if contestant[:status]
+    
+
+    
     if year == season
       puts "in"
       contestant_info.each do |contestant|
@@ -14,6 +23,7 @@ def get_first_name_of_season_winner(data, season)
         if contestant[:status] == "Winner"
           return "HI"#temp_name.split[0]
         end
+=end
       end
       puts "end -2"
     end
