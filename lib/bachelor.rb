@@ -1,7 +1,9 @@
 def get_first_name_of_season_winner(data, season)
   temp_name = ""
   data.each do |key, value|
+    puts key
     value.each do |year, contestant_info|
+      puts year
       if year == season
         contestant_info.each do |type, detail|
           if type == "name"
