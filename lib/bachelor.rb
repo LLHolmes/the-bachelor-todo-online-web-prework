@@ -4,6 +4,7 @@ def get_first_name_of_season_winner(data, season)
     puts "#{year} #{year.class}"
     puts "#{season} #{season.class}"
     if year == season
+      puts "in"
       contestant_info.each do |contestant|
         temp_name = contestant[:name]
         puts temp_name
@@ -14,7 +15,9 @@ def get_first_name_of_season_winner(data, season)
           return "HI"#temp_name.split[0]
         end
       end
+      return "end -2"
     end
+    return "end -1"
   end
   return "end"
 end
