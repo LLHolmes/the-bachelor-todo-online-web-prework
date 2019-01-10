@@ -2,7 +2,7 @@ def get_first_name_of_season_winner(data, season)
   temp_name = ""
   puts "Season requested: #{season}"
   data.each do |year, contestant_info|
-    puts "year #{year} vs. season #{season}"
+    puts "year #{year.class} vs. season #{season.class}"
     if year == season
       puts "in"
       contestant_info.each do |contestant|
