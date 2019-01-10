@@ -7,7 +7,7 @@ def get_first_name_of_season_winner(data, season)
       puts temp_name
       contestant_info.each do |type, detail|
         if type == "status" && detail == "Winner"
-          temp_name.split[0]
+          return temp_name.split[0]
         end
       end
     end
