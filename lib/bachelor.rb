@@ -3,7 +3,7 @@ def get_first_name_of_season_winner(data, season)
   puts "Season requested: #{season}"
   data.each do |year, contestant_info|
     puts "year #{year.class} vs. season #{season.class}"
-    if year == season
+    if year.to_s == season
       puts "in"
       contestant_info.each do |contestant|
         puts contestant[:name]
