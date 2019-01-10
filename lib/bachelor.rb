@@ -15,9 +15,9 @@ def get_first_name_of_season_winner(data, season)
           return "HI"#temp_name.split[0]
         end
       end
-      return "end -2"
+      puts "end -2"
     end
-    return "end -1"
+    puts "end -1"
   end
   return "end"
 end
