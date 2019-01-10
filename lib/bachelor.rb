@@ -60,17 +60,18 @@ end
 
 def get_average_age_for_season(data, season)
   total_years = 0
+  contestant_count = 0
   data.each do |year, contestant_info|
     if year == season
       contestant_info.each do |contestant|
         contestant.each do |stat, value|
           if stat == "age"
             total_years = total_years + value.to_i
-          elsif stat == "status" && value == "Winner"
-            return temp_name.split[0]
+            contestant_count += 1
           end
         end
       end
     end
   end
+  return (total_years/contestant_count)
 end
